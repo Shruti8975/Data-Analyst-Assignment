@@ -4,7 +4,7 @@ from dash import dcc, html
 from dash.dependencies import Input, Output
 import plotly.express as px
 
-df = pd.read_csv(r'C:\Users\shaik\OneDrive\Desktop\sales-dashboard\sales.csv.csv')
+df = pd.read_csv(r'C:\sales-dashboard\sales.csv.csv')
 df['Date'] = pd.to_datetime(df['Date'])
 
 # Initialize the Dash app
@@ -45,4 +45,5 @@ def update_charts(start_date, end_date):
 # Run the app
 if __name__ == '__main__':
     app.run(debug=True)
+
 
